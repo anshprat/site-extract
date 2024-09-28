@@ -1,3 +1,0 @@
-OLD_SITE=old_site_url
-NEW_SITE=new_site_url
-TEXT_ANCHOR=text_needle
