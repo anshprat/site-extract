@@ -20,7 +20,7 @@ else
   script_dir=$(dirname "$(readlink -f "$0")")
 fi
 
-source $script_dir/secrets.sh
+source $script_dir/config.sh
 
 update_tmpl() {
     sed -e "s/APPVERSION/${today}/" \
