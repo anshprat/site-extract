@@ -4,5 +4,9 @@ Firefox is not fully implemented yet (main manifest pending in v2)
 
 create the following secrets.sh
 
-OLD_SITE=OLD_SITE_URL
-NEW_SITE=NEW_SITE_URL
+
+```
+OLD_SITE=old_site_url
+NEW_SITE=new_site_url
+TEXT_ANCHOR=text_needle
+```
