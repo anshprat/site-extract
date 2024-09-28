@@ -2,7 +2,7 @@ Plugin to extract specific texts from a site.
 
 Firefox is not fully implemented yet (main manifest pending in v2)
 
-create the following secrets.sh
+create the following config.sh
 
 
 ```
