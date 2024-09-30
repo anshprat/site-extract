@@ -81,10 +81,10 @@ BRWSR_TYPE.runtime.onInstalled.addListener(() => {
       const firstLine = lines[0];
       const lastLine = lines[lines.length - 1];
   
-      if (firstLine.startsWith('ssh-rsa-cert-v01@openssh.com')) {
+      if (firstLine.startsWith('TEXT_ANCHOR')) {
         const filenameMatch = lastLine.match(/ssh -i (.*) -i/);
         if (filenameMatch && filenameMatch.length > 1) {
-          const filename = 'old-' + filenameMatch[1].trim(); // Change extension to .cert.pub
+          const filename = 'old-' + filenameMatch[1].trim();
           const blob = new Blob([firstLine], { type: 'application/octet-stream' });
   
           // Use FileReader to create a data URL
@@ -115,7 +115,7 @@ BRWSR_TYPE.runtime.onInstalled.addListener(() => {
         const firstLine = response.cert;
         const lastLine = response.command;
   
-        if (firstLine.startsWith('ssh-rsa-cert-v01@openssh.com')) {
+        if (firstLine.startsWith('TEXT_ANCHOR')) {
           const filenameMatch = lastLine.match(/ssh -i (.*) -i/);
           if (filenameMatch && filenameMatch.length > 1) {
             const filename = filenameMatch[1].trim();
